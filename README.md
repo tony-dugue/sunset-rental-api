@@ -44,6 +44,15 @@ $ https://github.com/tony-dugue/sunset-rental-api.git
 $ yarn install
 ```
 
+- Créer un fichier .env à la racine avec ces variables
+
+```shell script
+PORT=9002
+DB_NAME=xxx
+DB_USER=xxx
+DB_PASS=xxx
+```
+
 ## Démarrer l'application
 ***
 (1) démarrer l'application docker
