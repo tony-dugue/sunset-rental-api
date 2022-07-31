@@ -44,7 +44,7 @@ $ https://github.com/tony-dugue/sunset-rental-api.git
 $ yarn install
 ```
 
-- Créer un fichier .env à la racine avec ces variables
+- Créer un fichier .env à la racine avec ces variables pour la connexion à la base de données
 
 ```shell script
 PORT=9002
@@ -55,9 +55,7 @@ DB_PASS=xxx
 
 ## Démarrer l'application
 ***
-(1) démarrer l'application docker
-
-(2) Démarrer le serveur de développement (à la racine du projet) :
+Démarrer le serveur de développement (à la racine du projet) :
 ```bash
 $ yarn start #ou $ npm run start
 ```
@@ -67,22 +65,7 @@ Ou avec le watch mode
 $ yarn start:dev #ou $ npm run start:dev
 ```
 
-(3) dans le navigateur, visualisation de la base de données :
-```bash
-http://localhost:8081/
-```
-
 ### Autres commandes
-
-Démarrer les services dans docker :
-```bash
-$ docker-compose up -d
-```
-
-Voir les containers docker en cours de fonctionnement (si la bdd est bien démarrée) :
-```bash
-$ docker ps
-```
 
 Préparer l'application pour la production :
 ```bash
