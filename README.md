@@ -48,6 +48,9 @@ $ yarn install
 
 ```shell script
 PORT=9002
+NODE_ENV=development
+
+# DATABASE CONNECTION
 DB_NAME=xxx
 DB_USER=xxx
 DB_PASS=xxx
