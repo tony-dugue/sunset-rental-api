@@ -2,6 +2,7 @@ import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Car } from './entities/car.model';
 import { Repository } from 'typeorm';
+import { NewCarInput } from './dto/new-car.input';
 
 @Injectable()
 export class CarsService {
@@ -11,5 +12,13 @@ export class CarsService {
     return await this.carRepository.find({}).catch((err) => {
       throw new InternalServerErrorException();
     });
+  }
+
+  public async addCar(newCarData: NewCarInput): Promise<Car> {
+    const newCar = this.carRepository.create(newCarData);
+    await this.carRepository.save(newCar).catch((err) => {
+      throw new InternalServerErrorException();
+    });
+    return newCar;
   }
 }
